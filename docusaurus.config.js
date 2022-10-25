@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Project 0',
   tagline: 'Docs',
-  url: 'https://github.com',
+  url: 'https://vian21.github.io',
   baseUrl: '/project-0/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
