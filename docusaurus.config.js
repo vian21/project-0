@@ -10,6 +10,7 @@ const config = {
   tagline: 'Docs',
   url: 'https://vian21.github.io',
   baseUrl: '/project-0/',
+  trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.png',
@@ -18,7 +19,6 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'vian21', // Usually your GitHub org/user name.
   projectName: 'project-0', // Usually your repo name.
-  trailingSlash: false,
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
