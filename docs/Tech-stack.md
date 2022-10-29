@@ -5,7 +5,7 @@
 1. NodeJS
 2. Fastify server
 3. Typescript
-4. MySQL
+4. MySQL2
 
 ---
 
