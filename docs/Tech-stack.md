@@ -3,16 +3,20 @@
 ## Back-end:
 
 1. NodeJS
-2. Fastify server
+2. [Fastify server](https://www.npmjs.com/package/fastify)
 3. Typescript
-4. MySQL2
+4. [MySQL2](https://www.npmjs.com/package/mysql2)
+1. [JWT](https://www.npmjs.com/package/json-web-token)
+1. [Validator.js](https://www.npmjs.com/package/validator)
 
 ---
 
 ## Front-end:
 
-- ReactJS
-- Tailwind CSS
+1. ReactJS
+1. [Tailwind CSS](https://tailwindcss.com/)
+1. [React-router dom](https://reactrouter.com/en/main)
+1. typescript
 
 # PHP vs NodeJS
 

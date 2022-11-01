@@ -1,4 +1,8 @@
 # Mysql foreign keys
+**Author**: Patrick Igiraneza   
+**Date**: October 31 2022
+
+## What are they?
  - allow to query 2 tables at the same time
  - can query one table and join with info from another table
 Link: https://www.w3schools.com/sql/sql_foreignkey.asp

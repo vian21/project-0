@@ -1,4 +1,6 @@
 # Project zero
+**Author**: Patrick Igiraneza   
+**Date**: October 31, 2022
 
 ## What is it?
 Project 0 is a team of developers working on the creation of an affordable school management system that will be deployed at large. We hope that it will be used by every school in the world at one point. It will be inexpensive, and help school administrators focus more on their students than bureaucracy.
