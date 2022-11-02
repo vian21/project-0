@@ -8,7 +8,7 @@
 4. [MySQL2](https://www.npmjs.com/package/mysql2)
 1. [JWT](https://www.npmjs.com/package/json-web-token)
 1. [Validator.js](https://www.npmjs.com/package/validator)
-
+1. [Fastify compress](https://www.npmjs.com/package/@fastify/compress)- to compress data between server and front-end
 ---
 
 ## Front-end:
