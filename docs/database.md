@@ -41,7 +41,6 @@ Contains data about courses offered at a specific school.
 - school_id: in which school the subject is taught
 - teacher_id: id of the teacher teaching the subject
 - room_id: TEXT(255) -> null. Where the class is taken.
-- Subject_id:
 - start: date
 - end: date
 - archived: bool (Is the course finished or not)
@@ -101,7 +100,6 @@ This determines if a student is enrolled in a specif term. For instance, you can
 
 - id:
 - student_id:
-- subject_id:
 - academic_period_id:
 - grade: INT. what grade the student is in (11th grade, 12th grade, etc.). I think it needs to be REQUIRED almost every school has graded system; even in universities there is 1st year, 2nd until you finish. SO it is REQUIRED.
 
@@ -118,7 +116,7 @@ This determines if a student is enrolled in a specif term. For instance, you can
 This stores data about the tests, quizzes and exams made
 - id:
 - subject_id:
-- type: [quiz, test, exam]
+- type(INT): [quiz, test, exam]
 
 ## Discipline
 Points de discipline
