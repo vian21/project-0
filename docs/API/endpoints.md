@@ -1,4 +1,5 @@
 # API endpoints
+
 The following document outlines the following:
 - The guidelines for naming our API endpoints
 - The request methods that should be used depending on the query
