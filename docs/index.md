@@ -10,4 +10,5 @@ It will enable school admins and teachers to collect and analyze data about thei
 ## Useful Links
 Wiki: https://vian21.github.io/project-0/  
 Planner: https://www.taskade.com/d/9v9bjskheYF1Z3uG  
-Discord: https://discord.gg/QJ2ZPv6W
+Discord: https://discord.gg/QJ2ZPv6W   
+Markdown tags: https://rdmd.readme.io/docs/code-blocks

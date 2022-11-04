@@ -2,7 +2,7 @@
 
 ## Programming conventions
 
-### 1. Camel case
+### 1. Naming - Camel case
 
 we will be using camel case for naming variables in the back-end
 
