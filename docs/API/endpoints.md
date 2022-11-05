@@ -45,7 +45,8 @@ or if the query failed
 
 | Method  | Endpoint   | req.body          | Auth level  | Description                                        |
 | ------- | ---------- | ----------------- | ----------- | -------------------------------------------------- |
-| `POST`  | /users/:id |                   | All user    | Fetch data about a specific user(student or staff) |
+| `GET`  | /users/:id |                   | All user    | Fetch data about a specific user(student or staff) |
+| POST | /user/ | name, tel, DOB, ..| Root, Admin | creates a new user/student|
 | `PATCH` | /users/:id | field : newvalue | Root, Admin | used to update one user field/data in the database |
 
 ---
