@@ -41,7 +41,6 @@ Students table has been merged with users table since they are kinda the same. T
 - status: INT(2)- (The status determines if the account is existing/active or not)
 
 ## Subject
-## hello
 
 Contains data about courses offered at a specific school.
 
@@ -51,11 +50,14 @@ Contains data about courses offered at a specific school.
 - room: VARCHAR(255)[null]. Where the class is taken.
 - start: date
 - end: date
-- archived: bool (Is the course finished or not)
+- archived: BOOLEAN (Is the course finished or not)
 - language: VARCHAR(255) - Course language
-- code de cours: VARCHAR(3)
-- Name: VARCHAR(255) -
+- subject_code: VARCHAR(5) - course code e.g FRA, SEG, ITI, MAT, PHY
+- course_number: VARCHAR(5) - the code of the course e.g 1720, 1512, 4M, 4U..
+- name: VARCHAR(255) - name of the course e.g Intro to computing, Calculus I, calculus II
 - description: VARCHAR(255)
+
+- **Note**: The combination of the subject code and course number will give the course code: MAT + 1720 = MAT 1720
 
 ## Users (Staff and students)
 
@@ -63,6 +65,7 @@ Contains data about courses offered at a specific school.
 - first_name: VARCHAR(255) -
 - last_name: VARCHAR(255) -
 - DOB:
+- gender: INT(1) (default = 0 == "Male")
 - email: VARCHAR(255) -
 - address: VARCHAR(255) -
 - password: TEXT
@@ -72,7 +75,7 @@ Contains data about courses offered at a specific school.
   - teacher [2]
   - accountant [3]
   - student [4]
-- status: INT(1)[bool] - If the account has been activated, and a password set.
+- status: BOOLEAN - If the account has been activated, and a password set.
 
 ## Subject_enrollment
 
