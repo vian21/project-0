@@ -12,7 +12,7 @@ Every Api endpoint must be named in the plural if it is used to access one entit
 
 ### Request.body :
 
-This is used when sending data from the user to the backend. For example, if you want to update a student's name. You send a PATCH request to the server with the database field you want to update and the its new value.
+This is used when sending data from the user(front-end) to the backend. For example, if you want to update a student's name. You send a PATCH request to the server with a name property as the database field you want to update and the its new value.
 
 ```json
 {
@@ -23,7 +23,7 @@ This is used when sending data from the user to the backend. For example, if you
 
 ### **Response**: JSON
 
-Every endpoint should return data to the user to indicate if the query succeded or not. It should send HTTP status code and a JSON object with either a error property with a message or a succes property with a success message or the data requested.
+Every endpoint should return data to the user to indicate if the query succeeded or not. It should send HTTP status code and a JSON object with either a error property with a message or a succes property with a success message or the data requested.
 
 If the endpoint is for retrieving data, it should send back a success property with just a `success: true `. If it
 
@@ -45,12 +45,12 @@ or if the query failed
 
 ## Users
 
-| Method    | Endpoint       | req.body         | Auth level                 | Description                                        |
-| --------- | -------------- | ---------------- | -------------------------- | -------------------------------------------------- |
-| `GET`    | /api/users/:id |                  | All user                   | Fetch data about a specific user(student or staff) |
-| POST | /user/ | name, tel, DOB, ..| Root, Admin | creates a new user/student|
-| `PATCH`   | /api/users/:id | field : newvalue | Root, Admin                | used to update one user field/data in the database |
-| `DELETE ` | /api/user/:id  | Root, Admin      | Delete a user given his ID |
+| Method    | Endpoint       | req.body                                                                                                                                                               | Auth level  | Description                                        |
+| --------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------- |
+| `GET`     | /api/users/:id |                                                                                                                                                                        | All user    | Fetch data about a specific user(student or staff) |
+| `POST `   | /users/        | Required: <ul><li>first_name</li><li>last_name</li><li>DOB</li><li>gender</li><li>account_type</li></ul>Optional: <ul><li>tel</li><li>email</li><li>address</li> </ul> | Root, Admin | Creates a new user/student account                 |
+| `PATCH`   | /api/users/:id | field : newValue                                                                                                                                                       | Root, Admin | Used to update one user field/data in the database |
+| `DELETE ` | /api/users/:id |                                                                                                                                                                        | Root, Admin | Delete a user given his ID                         |
 
 ---
 
