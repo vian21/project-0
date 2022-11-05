@@ -1,7 +1,9 @@
 # Database Schema
 
 ## Schools:
+
 contains data about schools using the app
+
 - id: INT - auto
 - name: VARCHAR(255)
 - motto: VARCHAR(255) - words that describe the school's values
@@ -10,18 +12,22 @@ contains data about schools using the app
 - logo: VARCHAR(255) - name of the image in the public upload folder
 - website: VARCHAR(255) -
 
-## Grading
+## Grading_scale
+
 contains the grading scale used by a school. eg 90 -> A+, 80 -> B. etc... Each school has its own grading scale.
+
 - id: int - auto-increment
 - school_id: int - auto-increment
 - max: max and min are intervalles
 - min:
-- grade:  VARCHAR(2) -(A+, A)
+- grade: VARCHAR(2) -(A+, A)
 - gpa: float
 
 ## <del>Students</del>
+
 Students table has been merged with users table since they are kinda the same. They both contain the same data and by just using one table, it will simplify authentication for us. Instead of checking in both tables or creating 2 different login pages for students and admins/ teachers. We will just create one that everyone wil use.
-- id: int - (auto-increment) 
+
+- id: int - (auto-increment)
 - first_name: VARCHAR(255) - The student's first name
 - last_name: VARCHAR(255) - The student's last name
 - DOB: Date
@@ -34,17 +40,21 @@ Students table has been merged with users table since they are kinda the same. T
 - password: TEXT
 - status: INT(2)- (The status determines if the account is existing/active or not)
 
-## Subject_info
+## Subjects
+
 Contains data about courses offered at a specific school.
 
 - id:
 - school_id: in which school the subject is taught
 - teacher_id: id of the teacher teaching the subject
-- room:  VARCHAR(255)[null]. Where the class is taken.
+- room: VARCHAR(255)[null]. Where the class is taken.
 - start: date
 - end: date
 - archived: bool (Is the course finished or not)
 - language: VARCHAR(255) - Course language
+- code de cours: VARCHAR(3)
+- Name: VARCHAR(255) -
+- description: VARCHAR(255)
 
 ## Users (Staff and students)
 
@@ -56,14 +66,15 @@ Contains data about courses offered at a specific school.
 - address: VARCHAR(255) -
 - password: TEXT
 - account_type: INT(1)
-    - root [0] - us, the app owners
-    - admin [1]
-    - teacher [2]
-    - accountant [3]
-    - student [4]
+  - root [0] - us, the app owners
+  - admin [1]
+  - teacher [2]
+  - accountant [3]
+  - student [4]
 - status: INT(1)[bool] - If the account has been activated, and a password set.
 
 ## Subject_enrollment
+
 Stores data about courses a student is taking and in what term/period.
 
 - id: INT
@@ -73,16 +84,20 @@ Stores data about courses a student is taking and in what term/period.
 - finished: INT- (if the subject has already been done or not)
 
 ## School_transactions
+
 This is for us. Contains the money paid by schools to use our product. The product for now is to be charged per month.
+
 - id:
 - school_id: INT
 - Date: date of payment
 - period : For how many months did the person pay for
 - end_date: last day to pay, system is gonna close if not paid by this date.
-each time a school pays a new row will be added to extend the use period. The backend will calculate if the school has still access.
+  each time a school pays a new row will be added to extend the use period. The backend will calculate if the school has still access.
 
 ## Accounting
+
 This stores data about in school finances: tuition fees, making invoices, ....
+
 - id: INT
 - student_id: INT
 - amount: SIGNED FLOAT (va etre positif(chaque fois que la personne paie) et negatif(charge sur l'eleve))
@@ -93,20 +108,25 @@ This stores data about in school finances: tuition fees, making invoices, ....
 - academic_period_id
 
 ## Academic_periods
+
 Term/ semester info
+
 - id:
 - start_date: date
 - end_date: date
 - type: INT(1)[REQUIRED] (indicates if it's a term or semester)
+- school_id
 
-## Academic_enrolment
+## Academic_enrollment
 
-This determines if a student is enrolled in a specif term. For instance, you can be enrolled in the Fall term and not study during the winter term. 
+This determines if a student is enrolled in a specif term. For instance, you can be enrolled in the Fall term and not study during the winter term.
 
 - id:
 - student_id:
 - academic_period_id:
 - grade: INT. what grade the student is in (11th grade, 12th grade, etc.). I think it needs to be REQUIRED almost every school has graded system; even in universities there is 1st year, 2nd until you finish. SO it is REQUIRED.
+
+Note: don't need a school_id here because academic_period already has one. An admin will just query this table using the academic_period_id related to his school.
 
 ## Marks
 
@@ -115,16 +135,20 @@ This determines if a student is enrolled in a specif term. For instance, you can
 - student_id:
 - mark: FLOAT(REQUIRED)
 - academic_period_id: This will enable us to sort marks according to academic period. For example, fetch all students data in a term or sum all his point to get the average
-- assessments_id: 
+- assessments_id:
 
 ## Assessments
+
 This stores data about the tests, quizzes and exams made
+
 - id:
 - subject_id:
 - type(INT)[REQUIRED]: [quiz, test, exam]
 
 ## Discipline
+
 Points de discipline
+
 - id:
 - student_id:
 - academic_period_id:
@@ -132,8 +156,10 @@ Points de discipline
 - infraction: TEXT
 - invigilator: user_id -> Who deducted the student his marks.
 
-## Grade / streams/ classes/ 
+## Grade
+
 Contains streams(les classes i.e 7A, 7B, scientifique A ou B)
+
 - id
 - school_id
 - stream_name
