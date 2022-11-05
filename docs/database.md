@@ -40,7 +40,8 @@ Students table has been merged with users table since they are kinda the same. T
 - password: TEXT
 - status: INT(2)- (The status determines if the account is existing/active or not)
 
-## Subjects
+## Subject
+## hello
 
 Contains data about courses offered at a specific school.
 
