@@ -70,8 +70,9 @@ or if the query failed
 
 ## subject_info
 
-| Method | Endpoint | Auth level | Description |
-| ------ | -------- | ---------- | ----------- |
+| Method | Endpoint       | Auth level | Description |
+| ------ | -------------- | ---------- | ----------- |
+| GET    | /api/subjects/ |
 
 ---
 

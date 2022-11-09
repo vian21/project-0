@@ -11,6 +11,7 @@ contains data about schools using the app
 - email: VARCHAR(255) - (addresse e-mail de l'ecole qui sera sur le bulletin, dans le compte de l'ecole)
 - logo: VARCHAR(255) - name of the image in the public upload folder
 - website: VARCHAR(255) -
+- country: VARCHAR(60)
 
 ## Grading_scale
 
@@ -67,7 +68,8 @@ Contains data about courses offered at a specific school.
 - DOB:
 - gender: INT(1) (default = 0 == "Male")
 - email: VARCHAR(255) -
-- address: VARCHAR(255) -
+- address: VARCHAR(255) - the address whre they live. eg. 15 Blair Road.
+- nationality: VARCHAR(60) -
 - password: TEXT
 - account_type: INT(1)
   - root [0] - us, the app owners
