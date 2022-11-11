@@ -1,3 +1,6 @@
+---
+sidebar_position: 2
+---
 # Tech stack
 
 ## Back-end:
@@ -32,7 +35,9 @@
 1. [Tailwind CSS](https://tailwindcss.com/)
 1. [React-router dom](https://reactrouter.com/en/main)
 1. typescript
-
+1. DayJs  
+    - https://www.linkedin.com/pulse/3-simple-rules-effectively-handling-dates-timezones-cory-keane/
+    - will receive data in UTC and have ot convert to users local time
 # PHP vs NodeJS
 
 It took me time to decide whether to migrate to JavaScript for the back-end. For the front-end, JavaScript is the best option, since it allows us to easily create **Single Page Applications** using ReactJS (which will be used).
