@@ -68,7 +68,7 @@ or if the query failed
 | Method   | Endpoint         | Req body                                                             | Auth level | Description                             |
 | -------- | ---------------- | -------------------------------------------------------------------- | ---------- | --------------------------------------- |
 | `GET`    | /api/grading/    |                                                                      | All users  | contain grade of a specific school      |
-| `POST`   | /api/grading/    | Required:<ul><li>max</li><li>min</li><li>grade</li><li>gpa</li></ul> | Root,Admin | enter the max and min grade of a school |
+| `POST`   | /grading/        | Required:<ul><li>max</li><li>min</li><li>grade</li><li>gpa</li></ul> | Root,Admin | enter the max and min grade of a school |
 | `PATCH`  | /api/grading/:id | field:newvalue                                                       | Root,Admin | update a school grade                   |
 | `DELETE` | /api/grading/:id |                                                                      | Root,Admin | Delete a school grading                 |
 
@@ -132,12 +132,12 @@ or if the query failed
 
 ## discipline
 
-| Method   | Endpoint            | Req body                                                              | Auth level | Description                                   |
-| -------- | ------------------- | --------------------------------------------------------------------- | ---------- | --------------------------------------------- |
-| `GET`    | /api/discipline/    |                                                                       | All users  | fetch data about student discipline           |
-| `POST`   | /api/discipline/    | Required:<ul><li>points</li><li>invigilators</li><li>infractions</li> | Root,Admin | add how many points to withraw from a student |
-| `PATCH`  | /api/discipline/:id | field:newvalue                                                        | Root,Admin | update a student discipline                   |
-| `DELETE` | /api/discipline/:id |                                                                       | Root,Admin | delete a student dscipline                    |
+| Method   | Endpoint            | Req body                                                                   | Auth level | Description                                   |
+| -------- | ------------------- | -------------------------------------------------------------------------- | ---------- | --------------------------------------------- |
+| `GET`    | /api/discipline/    |                                                                            | All users  | fetch data about student discipline           |
+| `POST`   | /api/discipline/    | Required:<ul><li>points</li><li>invigilators</li><li>infractions</li></ul> | Root,Admin | add how many points to withraw from a student |
+| `PATCH`  | /api/discipline/:id | field:newvalue                                                             | Root,Admin | update a student discipline                   |
+| `DELETE` | /api/discipline/:id |                                                                            | Root,Admin | delete a student dscipline                    |
 
 ##
 
