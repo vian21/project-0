@@ -70,8 +70,12 @@ or if the query failed
 
 ## subject_info
 
-| Method | Endpoint | Auth level | Description |
-| ------ | -------- | ---------- | ----------- |
+| Method | Endpoint             | Request.body                                                                              | Auth level  | Description                      |
+| ------ | -------------------- | ----------------------------------------------------------------------------------------- | ----------- | -------------------------------- |
+| GET    | /api/subject_info/:id |                                                                                           | all users   | Give info about specific subject |
+| POST   | /api/subject_info/    | language, start_date, end_date, name, description, course_number, subject_code, school_id | admin, root | create a new subject             |
+| PATCH  | /api/subject_info/:id | field:new_value                                                                           | admin, root | update a subject                 |
+| DELETE | /api/subject_info/:id |                                                                                           | root, admin | remove a subject                 |
 
 ---
 

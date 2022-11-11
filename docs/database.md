@@ -40,22 +40,22 @@ Students table has been merged with users table since they are kinda the same. T
 - password: TEXT
 - status: INT(2)- (The status determines if the account is existing/active or not)
 
-## Subject
+## Subject_info
 
 Contains data about courses offered at a specific school.
 
-- id:
-- school_id: in which school the subject is taught
-- teacher_id: id of the teacher teaching the subject
+- id: [required]
+- school_id: [required] in which school the subject is taught
+- teacher_id: [null] id of the teacher teaching the subject
 - room: VARCHAR(255)[null]. Where the class is taken.
-- start: date
-- end: date
-- archived: BOOLEAN (Is the course finished or not)
-- language: VARCHAR(255) - Course language
-- subject_code: VARCHAR(5) - course code e.g FRA, SEG, ITI, MAT, PHY
-- course_number: VARCHAR(5) - the code of the course e.g 1720, 1512, 4M, 4U..
-- name: VARCHAR(255) - name of the course e.g Intro to computing, Calculus I, calculus II
-- description: VARCHAR(255)
+- start_date: [required] date
+- end_date: [required] date
+- archived: [required] BOOLEAN (Is the course finished or not)
+- language: [required] VARCHAR(255) - Course language
+- subject_code: [required] VARCHAR(5) - course code e.g FRA, SEG, ITI, MAT, PHY
+- course_number: [required] VARCHAR(5) - the code of the course e.g 1720, 1512, 4M, 4U..
+- name: [required] VARCHAR(255) - name of the course e.g Intro to computing, Calculus I, calculus II
+- description: [required] VARCHAR(255)
 
 - **Note**: The combination of the subject code and course number will give the course code: MAT + 1720 = MAT 1720
 
