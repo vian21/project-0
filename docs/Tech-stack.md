@@ -1,14 +1,32 @@
+---
+sidebar_position: 2
+---
 # Tech stack
 
 ## Back-end:
 
 1. NodeJS
+
 2. [Fastify server](https://www.npmjs.com/package/fastify)
+
 3. Typescript
+
 4. [MySQL2](https://www.npmjs.com/package/mysql2)
+
 1. [JWT](https://www.npmjs.com/package/json-web-token)
+
 1. [Validator.js](https://www.npmjs.com/package/validator)
+
 1. [Fastify compress](https://www.npmjs.com/package/@fastify/compress)- to compress data between server and front-end
+
+1. [uuid](https://www.npmjs.com/package/uuid) - to generate random unique ID. we need it for generating unique Identifiers for reseting passwords or creating accounts. This unique ID can stay the same or be updated regularly on every use. It will also be used to name file uploads/images to give them unique names.
+
+1. [dotenv](https://www.npmjs.com/package/dotenv) - used to read .env files in dev or production.
+
+1. [fastify/cookie](https://www.npmjs.com/package/@fastify/cookie) - used to create, parse, ..
+
+1. [CORS](https://www.npmjs.com/package/@fastify/cors) - Cross Origin Resource Sharing. This allows to the browser to communicate with the server, withour it, thefrontend would not trust the backend unless they are on the same domain.
+1.
 ---
 
 ## Front-end:
@@ -17,7 +35,9 @@
 1. [Tailwind CSS](https://tailwindcss.com/)
 1. [React-router dom](https://reactrouter.com/en/main)
 1. typescript
-
+1. DayJs  
+    - https://www.linkedin.com/pulse/3-simple-rules-effectively-handling-dates-timezones-cory-keane/
+    - will receive data in UTC and have ot convert to users local time
 # PHP vs NodeJS
 
 It took me time to decide whether to migrate to JavaScript for the back-end. For the front-end, JavaScript is the best option, since it allows us to easily create **Single Page Applications** using ReactJS (which will be used).
