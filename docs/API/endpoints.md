@@ -61,7 +61,7 @@ or if the query failed
 | `GET`    | /api/schools/    |                                                                                                          | All users  | Fetch data about a specific school                   |
 | `POST`   | /schools/        | Required: <ul><li>name</li><li>email</li></ul> Optional<ul><li>type</li><li>Logo</li><li>motto</li></ul> | Root       | create a new school                                  |
 | `PATCH`  | /api/schools/:id | field:newvalue                                                                                           | Root       | Used to update one school field/data in the database |
-| `DELETE` | /api/schools/:id |                                                                                                          | Root       | Delete a school by using his ID                      |
+| `DELETE` | /api/schools/:id |                                                                                                           | Root       | Delete a school by using his ID                      |
 
 ## Grading scale
 
