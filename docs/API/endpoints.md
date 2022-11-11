@@ -77,15 +77,23 @@ or if the query failed
 
 ## subject_enrollment
 
-| Method | Endpoint | Auth level | Description |
-| ------ | -------- | ---------- | ----------- |
+| Method    | Endpoint                    | Req body                                                                                               | Auth level  | Description |
+| --------- | --------------------------- | ------------------------------------------------------------------------------------------------------ | ----------- | ----------- |
+| `GET`     | /api/subject_enrollment/:id |                                                                                                        | Root, Admin |Fetch data about the subject a student is taking|
+| `POST `   | /subject_enrollment/        | Required: <ul><li>subject_id</li><li>student_id</li><li>academic_period_id</li></u1> Optional: <u1><l1>finished</li> </ul> | Root, Admin | Assign a new subject to a student 
+| `PATCH`   | /api/subject_enrollment/:id | field : newValue|Root, Admin|Used to update a student's subject field/data in the database
+| `DELETE ` | /api/subject_enrollment/:id |                                                                                                        | Root, Admin | Delete a subject given its ID
 
 ---
 
 ## school_transactions
 
-| Method | Endpoint | Auth level | Description |
-| ------ | -------- | ---------- | ----------- |
+| Method    | Endpoint                     | Req Body                                                                           | Auth level  | Description |
+| --------- | ---------------------------- | ---------------------------------------------------------------------------------- | ----------- | ----------- |
+| `GET`     | /api/school_transactions/:id |                                                                                    | Root, Admin |Fetch data about the transactions made by the school to us|
+| `POST `   | /school_transactions/        | Required: <ul><li>school_id</li><li>Date</li><li>period</li><li>end_date</li></ul> | Root, Admin |Create a school and its transactions profile|
+| `PATCH`   | /api/school_transactions/:id | field : newValue                                                                   | Root, Admin |Used to update the total transactions school field/data in the database|
+| `DELETE ` | /api/school_transactions/:id |                                                                                    | Root, Admin |Delete the school transactions given his ID|
 
 ---
 
@@ -133,5 +141,9 @@ or if the query failed
 
 ## streams
 
-| Method | Endpoint | Auth level | Description |
-| ------ | -------- | ---------- | ----------- |
+| Method  | Endpoint         | Req Body                                                  | Auth level  | Description |
+| ------- | ---------------- | --------------------------------------------------------- | ----------- | ----------- |
+| `GET`   | /api/streams/:id |                                                           | Root, Admin |Fetch data about the grades or academic levels of the school|
+| `POST ` | /streams/        | Required: <ul><li>school_id</li><li>stream_name</li></ul> | Root, Admin |Creates an academic level's profile|
+| `PATCH` | /api/streams/:id | field : newValue | Root, Admin | Used to update an academic level field/data in the database|
+|`DELETE `| /api/streamss/:id|                  | Root, Admin |Delete the academic level given its ID
