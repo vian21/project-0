@@ -45,7 +45,7 @@ or if the query failed
 
 ## Users
 
-| Method    | Endpoint       | req.body                                                                                                                                                               | Auth level  | Description                                        |
+| Method    | Endpoint       | req.body                                                                                                                                                               |  Auth level  | Description                                        |
 | --------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------- |
 | `GET`     | /api/users/:id |                                                                                                                                                                        | All user    | Fetch data about a specific user(student or staff) |
 | `POST `   | /users/        | Required: <ul><li>first_name</li><li>last_name</li><li>DOB</li><li>gender</li><li>account_type</li></ul>Optional: <ul><li>tel</li><li>email</li><li>address</li> </ul> | Root, Admin | Creates a new user/student account                 |
@@ -61,7 +61,7 @@ or if the query failed
 | `GET`    | /api/schools/    |                                                                                                          | All users  | Fetch data about a specific school                   |
 | `POST`   | /schools/        | Required: <ul><li>name</li><li>email</li></ul> Optional<ul><li>type</li><li>Logo</li><li>motto</li></ul> | Root       | create a new school                                  |
 | `PATCH`  | /api/schools/:id | field:newvalue                                                                                           | Root       | Used to update one school field/data in the database |
-| `DELETE` | /api/schools/:id |                                                                                                           | Root       | Delete a school by using his ID                      |
+| `DELETE` | /api/schools/:id |                                                                                                          | Root       | Delete a school by using his ID                      |
 
 ## Grading scale
 
@@ -76,9 +76,12 @@ or if the query failed
 
 ## subject_info
 
-| Method | Endpoint       | Auth level | Description |
-| ------ | -------------- | ---------- | ----------- |
-| GET    | /api/subjects/ |
+| Method | Endpoint              | Request.body                                                                              | Auth level  | Description                      |
+| ------ | --------------------- | ----------------------------------------------------------------------------------------- | ----------- | -------------------------------- |
+| `GET`    | /api/subject_info/:id |                                                                                           | all users   | Give info about specific subject |
+| `POST`   | /api/subject_info/    | language, start_date, end_date, name, description, course_number, subject_code, school_id | admin, root | create a new subject             |
+| `PATCH`  | /api/subject_info/:id | field:new_value                                                                           | admin, root | update a subject                 |
+| `DELETE` | /api/subject_info/:id |                                                                                           | root, admin | remove a subject                 |
 
 ---
 
@@ -134,10 +137,12 @@ or if the query failed
 
 ## assessements
 
-| Method | Endpoint | Auth level | Description |
-| ------ | -------- | ---------- | ----------- |
-
----
+| Method | Endpoint             | Request_body    | Auth level  | Description                                      |
+| ------ | -------------------- | --------------- | ----------- | ------------------------------------------------ |
+| `GET`    | /api/assessments/:id |                 | all user    | Give info about assessment which will take place |
+| `POST`   | /api/assessments/    | type            | root, admin | create a new assessment                          |
+| `PATCH`  | /api/assessments/:id | field:new_value | root, admin | update an assessment                             |
+| `DELETE` | /api/assessments/:id |                 | root, admin | delete an assessment                             |
 
 ## discipline
 
