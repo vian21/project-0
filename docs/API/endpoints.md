@@ -45,7 +45,7 @@ or if the query failed
 
 ## Users
 
-| Method    | Endpoint       | req.body                                                                                                                                                               | Auth level  | Description                                        |
+| Method    | Endpoint       | req.body                                                                                                                                                               |Auth level  | Description                                        |
 | --------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------------------------------- |
 | `GET`     | /api/users/:id |                                                                                                                                                                        | All user    | Fetch data about a specific user(student or staff) |
 | `POST `   | /users/        | Required: <ul><li>first_name</li><li>last_name</li><li>DOB</li><li>gender</li><li>account_type</li></ul>Optional: <ul><li>tel</li><li>email</li><li>address</li> </ul> | Root, Admin | Creates a new user/student account                 |
