@@ -1,4 +1,3 @@
-
 # Programming conventions
 
 ### 1. Naming - Camel case
@@ -31,7 +30,6 @@ Always document your code. A function description should be included at the top 
 1. what are the arguments it takes, their types and which ones are required
 1. return data and data types
 
-
 ```javascript
 /*
  * Updates student's name
@@ -42,9 +40,9 @@ Always document your code. A function description should be included at the top 
  * @returns {boolean} whether the operation was successful or not
  *
  */
-async function updateStudentName(id: number, name: string){
-    // code ...
-    return true
+async function updateStudentName(id: number, name: string) {
+  // code ...
+  return true;
 }
 ```
 
@@ -52,8 +50,29 @@ async function updateStudentName(id: number, name: string){
 
 This will ensure that no function will block the program execution
 
-```javascript
+````javascript
 const deleteMark = (markId) =>{
     // code ...
 }
+```javascript
+````
+
+### 5. Order of imports
+
+Related imports should be grouped together and separated by a new line.
+
+1. General imports(function)
+2. Interfaces
+3. Specific imports (functions)
+
+```javascript
+import prismaClient from "@prisma/client";
+
+import {UserSchema, User, UserSelect} from "@plugins/interfaces";
+
+import {getUsers, getUser} from "./user";
+
+import {updateUser} from "./update";
+import {updateSchool} from "./school/update";
+...
 ```
