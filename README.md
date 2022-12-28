@@ -1,6 +1,7 @@
 # Website
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This website is built using Docusaurus 2, a modern static website generator.
+Link : https://vian21.github.io/project-0/
 
 ### Installation
 
@@ -24,7 +25,8 @@ npm run build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-### Run build 
+### Run build
+
 ```sh
 npm run serve
 ```
