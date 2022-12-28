@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 ---
+
 # Database Schema
 
 ## Schools:
@@ -42,7 +43,7 @@ Students table has been merged with users table since they are kinda the same. T
 - tel: int - (optional)
 - uniqueID: TEXT(unique)- utiliser pour reinitialiser ton mot de passe
 - password: TEXT
-- status: INT(2)- (The status determines if the account is existing/active or not)
+- status: Boolean @default(false)- (The status determines if the account is existing/active or not)
 
 ## Subject
 
@@ -54,7 +55,7 @@ Contains data about courses offered at a specific school.
 - room: VARCHAR(255)[null]. Where the class is taken.
 - start: date
 - end: date
-- archived: BOOLEAN (Is the course finished or not)
+- archived: BOOLEAN @default(false) (Is the course finished or not)
 - language: VARCHAR(255) - Course language
 - subject_code: VARCHAR(5) - course code e.g FRA, SEG, ITI, MAT, PHY
 - course_number: VARCHAR(5) - the code of the course e.g 1720, 1512, 4M, 4U..
@@ -80,9 +81,9 @@ Contains data about courses offered at a specific school.
   - teacher [2]
   - accountant [3]
   - student [4]
-- status: BOOLEAN - If the account has been activated, and a password set.
+- status: BOOLEAN @default(false) - If the account has been activated, and a password set.
 
-## Subject_enrollment
+## Subject_enrollments
 
 Stores data about courses a student is taking and in what term/period.
 
@@ -90,7 +91,7 @@ Stores data about courses a student is taking and in what term/period.
 - subject_id: INT
 - student_id: INT
 - academic_period_id: INT- in what term did the student take the course.
-- finished: INT- (if the subject has already been done or not)
+- finished: Boolean @default(false) - (if the subject has already been done or not)
 
 ## School_transactions
 
