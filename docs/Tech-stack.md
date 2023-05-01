@@ -12,7 +12,7 @@ sidebar_position: 2
 
 3. Typescript
 
-4. [MySQL2](https://www.npmjs.com/package/mysql2)
+4. MySQL
 
 5. [JWT](https://www.npmjs.com/package/json-web-token)
 
@@ -27,17 +27,17 @@ sidebar_position: 2
 10. [fastify/cookie](https://www.npmjs.com/package/@fastify/cookie) - used to create, parse, ..
 
 11. [CORS](https://www.npmjs.com/package/@fastify/cors) - Cross Origin Resource Sharing. This allows to the browser to communicate with the server, withour it, thefrontend would not trust the backend unless they are on the same domain.
-12.
+12. PrismaJs
+13. Vitest
 
 ---
 
 ## Front-end:
 
-1. ReactJS
+1. NextJS
 1. [Tailwind CSS](https://tailwindcss.com/)
-1. [React-router](https://reactrouter.com/en/main)
 1. typescript
-1. [ViteJS](https://vitejs.dev/)
+1. NextAuth
 
 # PHP vs NodeJS
 
